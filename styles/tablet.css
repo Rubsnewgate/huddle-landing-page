@@ -1,0 +1,67 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 50px 70px;
+  background-color: hsl(257, 40%, 49%);
+  background-image: url(../assets/img/bg-desktop.svg);
+  background-size: cover;
+  background-position: left;
+}
+
+@media screen and (max-width: 541px) {
+  body {
+    height: auto;
+    padding: 30px 10px;
+    background-image: url(../assets/img/bg-mobile.svg);
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1025px) {
+  body {
+    display: grid;
+    place-content: center;
+    padding: 50px;
+  }
+}
+.main-wrapper {
+  height: 600px;
+}
+
+.hero {
+  gap: 60px;
+}
+
+.hero__background img {
+  height: 320px;
+}
+
+.info__register {
+  gap: 25px;
+}
+
+.register__title {
+  font-size: 2.6rem;
+}
+
+.register__btn {
+  margin-top: 20px;
+}
+
+@media screen and (max-height: 600px) {
+  body {
+    height: auto;
+  }
+}
+
+/*# sourceMappingURL=tablet.css.map */

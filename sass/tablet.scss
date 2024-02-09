@@ -1,0 +1,34 @@
+@import 'guide.scss';
+
+// Main Container
+.main-wrapper {
+	height: 600px;
+}
+
+// Hero Section
+.hero {
+	gap: 60px;
+}
+.hero__background {
+	img {
+		height: 320px;
+	}
+}
+
+// Info Section
+.info__register {
+	gap: 25px;
+}
+.register__title {
+	font-size: 2.6rem;
+}
+.register__btn {
+	margin-top: 20px;
+}
+
+// Breakpoints
+@media screen and (max-height: 600px) {
+	body {
+		height: auto;
+	}
+}

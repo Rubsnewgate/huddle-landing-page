@@ -1,0 +1,98 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 50px 70px;
+  background-color: hsl(257, 40%, 49%);
+  background-image: url(../assets/img/bg-desktop.svg);
+  background-size: cover;
+  background-position: left;
+}
+
+@media screen and (max-width: 541px) {
+  body {
+    height: auto;
+    padding: 30px 10px;
+    background-image: url(../assets/img/bg-mobile.svg);
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1025px) {
+  body {
+    display: grid;
+    place-content: center;
+    padding: 50px;
+  }
+}
+.main-wrapper {
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, auto);
+}
+
+.hero {
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.hero__logo {
+  width: 150px;
+  height: 50px;
+}
+
+.hero__background {
+  width: 100%;
+  height: 200px;
+}
+.hero__background img {
+  width: 100%;
+  height: 100%;
+}
+
+.info__register {
+  align-items: center;
+  text-align: center;
+}
+
+.register__title {
+  font-size: 2.2rem;
+}
+
+.register__description {
+  font-size: 1.6rem;
+}
+
+.register__social-media {
+  position: unset;
+  justify-content: center;
+}
+
+@media screen and (min-width: 540px) {
+  body {
+    background-size: contain;
+  }
+  .hero__background {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .hero__background img {
+    width: 60%;
+  }
+}
+@media screen and (min-height: 740px) and (max-width: 932px) {
+  body {
+    height: 100vh;
+  }
+}
+
+/*# sourceMappingURL=mobile.css.map */

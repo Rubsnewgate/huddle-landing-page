@@ -1,0 +1,142 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 50px 70px;
+  background-color: hsl(257, 40%, 49%);
+  background-image: url(../assets/img/bg-desktop.svg);
+  background-size: cover;
+  background-position: left;
+}
+
+@media screen and (max-width: 541px) {
+  body {
+    height: auto;
+    padding: 30px 10px;
+    background-image: url(../assets/img/bg-mobile.svg);
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1025px) {
+  body {
+    display: grid;
+    place-content: center;
+    padding: 50px;
+  }
+}
+.main-wrapper {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  width: 100%;
+  height: 100%;
+  font-family: "Open Sans", sans-serif;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 50px;
+}
+
+.hero__logo {
+  width: 270px;
+  height: 70px;
+}
+.hero__logo img {
+  width: 100%;
+  height: 100%;
+}
+
+.hero__background {
+  width: 90%;
+  height: auto;
+}
+.hero__background img {
+  width: 100%;
+  height: 400px;
+}
+
+.info {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 50px;
+}
+
+.info__register {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.register__title {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 3.8rem;
+  color: hsl(0, 0%, 100%);
+}
+
+.register__description {
+  margin: 0;
+  font-size: 1.8rem;
+  color: hsl(0, 19%, 92%);
+}
+
+.register__btn {
+  width: 150px;
+  height: 45px;
+  font-size: 1.6rem;
+  color: hsl(257, 40%, 49%);
+  border: none;
+  border-radius: 40px;
+  transition: transform 600ms;
+}
+.register__btn:hover {
+  background-color: hsl(300, 69%, 71%);
+  color: hsl(0, 0%, 100%);
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.register__social-media {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  width: 100%;
+}
+
+.social-media__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 150px;
+  padding: 0;
+  list-style: none;
+}
+
+.list-link--active {
+  fill: hsl(0, 0%, 100%);
+  transition: transform 600ms;
+}
+.list-link--active:hover {
+  fill: hsl(300, 69%, 71%);
+  transform: scale(1.05);
+}
+
+/*# sourceMappingURL=desktop.css.map */
