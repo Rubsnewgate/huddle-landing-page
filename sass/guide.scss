@@ -27,8 +27,8 @@ body {
 	padding: 50px 70px;
 	background-color: $violet;
 	background-image: url(../assets/img/bg-desktop.svg);
-	background-size: cover;
-	background-position: left;
+	background-size: contain;
+	background-repeat: no-repeat;
 }
 
 // Flexbox Factory
