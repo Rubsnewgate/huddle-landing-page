@@ -139,4 +139,8 @@ body {
   transform: scale(1.05);
 }
 
+.alternative-text {
+  display: none;
+}
+
 /*# sourceMappingURL=desktop.css.map */
