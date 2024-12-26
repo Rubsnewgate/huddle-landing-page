@@ -8,76 +8,65 @@ html {
 
 body {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   margin: 0;
-  padding: 50px 70px;
+  padding: 5em 7em;
   background-color: hsl(257, 40%, 49%);
   background-image: url(../assets/img/bg-desktop.svg);
-  background-size: contain;
-  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-@media screen and (max-width: 541px) {
-  body {
-    height: auto;
-    padding: 30px 10px;
-    background-image: url(../assets/img/bg-mobile.svg);
-    background-position: top;
-    background-size: contain;
-    background-repeat: no-repeat;
-  }
-}
 @media screen and (min-width: 768px) and (max-width: 1025px) {
   body {
     display: grid;
     place-content: center;
-    padding: 50px;
+    padding: 5em 2em;
   }
 }
 .main-wrapper {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
   width: 100%;
-  height: 100%;
+  height: calc(100vh - 10em);
   font-family: "Open Sans", sans-serif;
 }
 
 .hero {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: start;
-  gap: 50px;
 }
 
 .hero__logo {
-  width: 270px;
-  height: 70px;
+  width: 27em;
+  height: 7em;
 }
 .hero__logo img {
   width: 100%;
   height: 100%;
 }
 
-.hero__background {
-  width: 90%;
+.hero__image {
+  width: 100%;
   height: auto;
 }
-.hero__background img {
+.hero__image img {
   width: 100%;
-  height: 480px;
+  height: 100%;
 }
 
-.info {
+.register {
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: start;
   gap: 50px;
+  padding-left: 3.5em;
 }
 
-.info__register {
+.register-info {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -103,7 +92,7 @@ body {
   color: hsl(257, 40%, 49%);
   border: none;
   border-radius: 40px;
-  transition: transform 600ms;
+  transition: transform 0.6s ease-in-out;
 }
 .register__btn:hover {
   background-color: hsl(300, 69%, 71%);
@@ -112,9 +101,10 @@ body {
   transform: scale(1.05);
 }
 
-.register__social-media {
+.social-media {
   position: absolute;
   bottom: 0;
+  right: 0;
   display: flex;
   flex-direction: row;
   justify-content: end;
@@ -130,11 +120,11 @@ body {
   list-style: none;
 }
 
-.list-link--active {
+.link-icon {
   fill: hsl(0, 0%, 100%);
   transition: transform 600ms;
 }
-.list-link--active:hover {
+.link-icon:hover {
   fill: hsl(300, 69%, 71%);
   transform: scale(1.05);
 }

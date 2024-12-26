@@ -1,0 +1,51 @@
+@use 'guide.sass'
+
+// main Container
+.main-wrapper
+	grid-template-columns: 1fr
+	grid-template-rows: repeat(2, auto)
+
+// hero Section
+.hero
+	gap: 20px
+	margin-bottom: 20px
+
+	&__logo
+		width: 90%
+		height: 50px
+
+	&__image
+		margin: 0 auto
+		width: 90%
+		height: 200px
+	img
+		width: 100%
+		height: 100%
+
+// info Section
+.register
+	padding: 0
+
+.register-info
+	align-items: center
+	text-align: center
+
+.register__title
+	font-size: 2.2rem
+
+.register__description
+	font-size: 1.6rem
+
+.social-media
+	position: unset
+	justify-content: center
+
+// breakpoint
+@media screen and (min-width: 540px)
+	body
+		background-size: contain
+
+	.hero__background
+		@include guide.flexbox(row, center, null, null)
+		img
+			width: 60%
