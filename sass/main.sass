@@ -1,0 +1,129 @@
+@use 'resets.sass'
+
+// Main container
+.main
+    display: grid
+    grid-template-columns: 1fr
+    grid-template-rows: repeat(2, auto)
+    gap: 1.5rem
+    font-family: resets.$main-font
+
+// Hero
+.hero
+    @include resets.flexbox(column, space-evenly, center)
+    gap: 1.25rem
+    min-height: 40vh
+
+    &__logo
+        width: fit-content
+        height: 3.25rem
+
+    &__image
+        width: min(23.75rem, 90%)
+        height: 12.5rem
+
+        img
+            width: 100%
+            height: 100%
+
+// Register
+.register
+    position: relative
+    @include resets.flexbox(column, space-evenly, start, 3.25rem)
+
+.presentation
+    @include resets.flexbox(column, null, center, 1.25rem)
+    text-align: center
+
+    &__title
+        font-family: resets.$heading-font
+        font-size: 1.5rem
+        color: resets.$white
+
+    &__description
+        font-size: 1rem
+        color: resets.$light-gray
+
+    .register__btn
+        width: 9.5rem
+        height: 2.75rem
+        font-size: 1rem
+        color: resets.$violet
+        border: none
+        border-radius: 20.5rem
+
+        &:hover
+            background-color: resets.$soft-magenta
+            color: resets.$white
+            cursor: pointer
+
+// Social media
+.social-media
+    @include resets.flexbox(row, center, null)
+    position: unset
+    width: 100%
+
+    &__list
+        @include resets.flexbox(row, space-between)
+        width: 9.5rem
+
+        a
+            display: inline-block
+            width: 2rem
+            color: resets.$white
+
+            &:hover
+                color: resets.$soft-magenta
+
+// Breakpoints
+@media screen and (min-width: 48rem)
+    .main
+        grid-template-columns: 1.2fr 1fr
+        grid-template-rows: 1fr
+        gap: 0
+        width: 100%
+        height: 32.75rem
+
+    .hero__logo
+        align-self: start
+
+    .hero__image
+        width: 90%
+        height: 18.75rem
+
+    .register
+        justify-content: center
+
+    .presentation
+        align-items: flex-start
+        gap: 1.5rem
+        text-align: start
+
+        &__title
+            font-size: 1.75rem
+
+        &__description
+            font-size: 1.25rem
+
+    .social-media
+        @include resets.flexbox(row, end, null)
+        position: absolute
+        bottom: 0
+        right: 0
+
+@media screen and (min-width: 64.25rem)
+    .main
+        height: calc(100vh - resets.$padding * 2)
+
+    .hero
+        justify-content: space-between
+        align-items: start
+
+        &__image
+            height: 75%
+
+    .presentation__title
+        font-size: 2rem
+
+    .presentation__description
+        font-size: 1.125rem

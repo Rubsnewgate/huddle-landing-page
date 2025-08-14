@@ -1,0 +1,69 @@
+// Colors
+$violet: hsl(257, 40%, 49%)
+$soft-magenta: hsl(300, 69%, 71%)
+$light-gray: hsl(0, 19%, 92%)
+$white: hsl(0, 0%, 100%)
+
+// Typography
+$main-font: 'Open Sans', sans-serif
+$heading-font: 'Poppins', sans-serif
+
+$normal: 400
+$bold: 600
+
+// Padding
+$padding: calc(0.5rem + 1.5625vw)
+
+// Resets
+*, *::before, *::after
+	box-sizing: border-box
+
+*
+	margin: 0
+
+body
+	width: 100%
+	min-height: 100vh
+	padding: $padding
+	background-color: $violet
+	background-image: url('../assets/img/bg-mobile.svg')
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: top
+
+h1, h2, h3, h4, h5, h6
+	text-wrap: balance
+
+p
+	text-wrap: pretty
+	line-height: 1.5
+
+ul
+	list-style: none
+	padding: 0
+
+img
+	max-width: 100%
+
+// Layouts
+@mixin flexbox($direction:null, $content:null, $items:null, $gap:null)
+	display: flex
+	flex-direction: $direction
+	justify-content: $content
+	align-items: $items
+	gap: $gap
+
+@media screen and (min-width: 48rem)
+	body
+		background-image: url('../assets/img/bg-desktop.svg')
+		background-size: cover
+
+@media screen and (min-width: 48rem) and (max-width: 64.25rem)
+	body
+		display: grid
+		place-content: center
+		background-position: center
+
+@media screen and (min-width: 64.25rem)
+	body
+		background-position: left
